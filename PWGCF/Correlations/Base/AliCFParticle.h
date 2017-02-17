@@ -23,40 +23,40 @@ class AliCFParticle : public AliVParticle, public TArrayF {
   }
   virtual ~AliCFParticle(){}
 
-  virtual Double_t Pt()    const { return fPt;      }
-  virtual Double_t Phi()   const { return fPhi;     }
-  virtual Double_t Eta()   const { return fEta;     }
-  virtual Short_t Charge() const { return fCharge;  }
-  virtual UInt_t Mask()    const { return fMask;    }
+  Double_t Pt()    const { return fPt;      }
+  Double_t Phi()   const { return fPhi;     }
+  Double_t Eta()   const { return fEta;     }
+  Short_t Charge() const { return fCharge;  }
+  UInt_t Mask()    const { return fMask;    }
   
-  virtual Double_t Px() const { AliFatal("Not implemented"); return 0; }
-  virtual Double_t Py() const { AliFatal("Not implemented"); return 0; }
-  virtual Double_t Pz() const { AliFatal("Not implemented"); return 0; }
-  virtual Double_t P()  const { AliFatal("Not implemented"); return 0; }
-  virtual Bool_t   PxPyPz(Double_t[3]) const { AliFatal("Not implemented"); return 0; }
+  Double_t Px() const { AliFatal("Not implemented"); return 0; }
+  Double_t Py() const { AliFatal("Not implemented"); return 0; }
+  Double_t Pz() const { AliFatal("Not implemented"); return 0; }
+  Double_t P()  const { AliFatal("Not implemented"); return 0; }
+  Bool_t   PxPyPz(Double_t[3]) const { AliFatal("Not implemented"); return 0; }
 
-  virtual Double_t Xv() const { AliFatal("Not implemented"); return 0; }
-  virtual Double_t Yv() const { AliFatal("Not implemented"); return 0; }
-  virtual Double_t Zv() const { AliFatal("Not implemented"); return 0; }
-  virtual Bool_t   XvYvZv(Double_t[3]) const { AliFatal("Not implemented"); return 0; }
+  Double_t Xv() const { AliFatal("Not implemented"); return 0; }
+  Double_t Yv() const { AliFatal("Not implemented"); return 0; }
+  Double_t Zv() const { AliFatal("Not implemented"); return 0; }
+  Bool_t   XvYvZv(Double_t[3]) const { AliFatal("Not implemented"); return 0; }
 
-  virtual Double_t OneOverPt()  const { AliFatal("Not implemented"); return 0; }
-  virtual Double_t Theta()      const { AliFatal("Not implemented"); return 0; }
-  virtual Double_t E()          const { AliFatal("Not implemented"); return 0; }
-  virtual Double_t M()          const { AliFatal("Not implemented"); return 0; }
-  virtual Double_t Y()          const { AliFatal("Not implemented"); return 0; }
-  virtual Int_t   GetLabel()    const { AliFatal("Not implemented"); return 0; }
+  Double_t OneOverPt()  const { AliFatal("Not implemented"); return 0; }
+  Double_t Theta()      const { AliFatal("Not implemented"); return 0; }
+  Double_t E()          const { AliFatal("Not implemented"); return 0; }
+  Double_t M()          const { AliFatal("Not implemented"); return 0; }
+  Double_t Y()          const { AliFatal("Not implemented"); return 0; }
+  Int_t   GetLabel()    const { AliFatal("Not implemented"); return 0; }
   
-  virtual Int_t   PdgCode()     const { AliFatal("Not implemented"); return 0; }
-  virtual const Double_t *PID() const { AliFatal("Not implemented"); return 0; }
+  Int_t   PdgCode()     const { AliFatal("Not implemented"); return 0; }
+  const Double_t *PID() const { AliFatal("Not implemented"); return 0; }
 
-  virtual Bool_t IsEqual(const TObject* obj) const { return (obj->GetUniqueID() == GetUniqueID()); }
+  Bool_t IsEqual(const TObject* obj) const { return (obj->GetUniqueID() == GetUniqueID()); }
 
-  virtual void SetPt(Double_t pt)        { fPt     = pt;     }
-  virtual void SetEta(Double_t eta)      { fEta    = eta;    }
-  virtual void SetPhi(Double_t phi)      { fPhi    = phi;    }
-  virtual void SetCharge(Short_t charge) { fCharge = charge; }
-  virtual void SetMask(Short_t mask)     { fMask   = mask;   }
+  void SetPt(Double_t pt)        { fPt     = pt;     }
+  void SetEta(Double_t eta)      { fEta    = eta;    }
+  void SetPhi(Double_t phi)      { fPhi    = phi;    }
+  void SetCharge(Short_t charge) { fCharge = charge; }
+  void SetMask(Short_t mask)     { fMask   = mask;   }
  protected:
   Float_t fPt;
   Float_t fEta;
